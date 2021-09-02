@@ -755,7 +755,7 @@ template {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 35px;
 }
 
@@ -811,6 +811,7 @@ template {
 
 .advantages {
   margin-bottom: 56px;
+  max-width: 100%;
 }
 
 .advantages >.heading {
@@ -837,7 +838,6 @@ template {
   text-align: center;
   margin: 0;
   position: relative;
-  flex-grow: 1;
 }
 
 .advantage__item:nth-child(1) {
@@ -863,7 +863,7 @@ template {
   margin: 15px auto 20px auto;
   margin-top: 15px;
   padding: 0;
-  width: 250px;
+  max-width: 250px;
   font-size: 16px;
 }
 
@@ -1040,7 +1040,7 @@ template {
 
 @media (min-width: 768px) {
   .advantages {
-    margin-bottom: 166px;
+    margin-bottom: 100px;
   }
 
   .advantages >.heading {
@@ -1048,7 +1048,7 @@ template {
   }
 
   .heading {
-    font-size: 48px;
+    font-size: 44px;
   }
 
   .advantage__list {
@@ -1057,12 +1057,12 @@ template {
   }
 
   .advantage__title {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .advantage__text {
     margin-top: 25px;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .advantage__item::after {
@@ -1129,6 +1129,23 @@ template {
 
   .product__text {
     font-size: 18px;
+  }
+
+  .heading {
+    font-size: 48px;
+  }
+
+  .advantage__title {
+    font-size: 24px;
+  }
+
+  .advantage__text {
+    margin-top: 25px;
+    font-size: 18px;
+  }
+
+  .advantages {
+    margin-bottom: 166px;
   }
 
   .caption {
