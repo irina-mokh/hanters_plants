@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <title>Hanters Plants</title>
+  </head>
+  <body class="page-body">
+    <header class="main-header container">
+      <nav class="nav">
+        <a href="#" class="logo"><img src="img/logo.png" alt="Логотип" class="logo-pic" width="120" height="49"></a>
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="#catalog" class="menu__link">каталог</a>
+          </li>
+          <li class="menu__item">
+            <a href="#advantages" class="menu__link">преимущества</a>
+          </li>
+        </ul>
+        <a href="#order" class="button_buy button_red">заказать</a>
+      </nav>
+    </header>
+    <main>
+      <h1 class="visually-hidden heading">Магазин хищных растений Hanter Plants</h1>
+      <section class="slider">
+        <h2 class="visually-hidden heading">Галерея</h2>
+        <ul class="gallery">
+          <li class="slide slide_active"><img class="slide__pic" src="img/slide1.jpg" alt="Венера мухоловка" width="1440" height="682"></li>
+          <li class="slide"><img class="slide__pic" src="img/slide2.jpg" alt="Растения в упаковке" width="1440" height="682"></li>
+          <li class="slide"><img class="slide__pic" src="img/slide3.jpg" alt="Растения в горшках" width="1440" height="682"></li>
+        </ul>
+        <div class="container">
+          <div class="slider__text">
+            Только у нас огромный выбор хищных растений
+          </div>
+        </div>
+        <div class="slider__controls">
+          <button class="prev-slide slide-arrow disabled-arrow" type="button" aria-label="Предыдущий слайд">
+            <svg class="arrow-icon" width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.292894 7.53557C-0.0976295 7.92609 -0.0976295 8.55926 0.292894 8.94978L6.65686 15.3137C7.04738 15.7043 7.68055 15.7043 8.07107 15.3137C8.46159 14.9232 8.46159 14.2901 8.07107 13.8995L2.41422 8.24268L8.07107 2.58582C8.46159 2.1953 8.46159 1.56213 8.07107 1.17161C7.68055 0.781084 7.04738 0.781084 6.65686 1.17161L0.292894 7.53557ZM31 7.24268L1 7.24268V9.24268L31 9.24268V7.24268Z"  fill="#32521E"/>
+            </svg>              
+          </button>
+          <button class="slider__control slider__control_current" type="button" aria-label="Первый слайд"></button>
+          <button class="slider__control" type="button" aria-label="Второй слайд"></button>
+          <button class="slider__control" type="button" aria-label="Третий слайд"></button>
+          <button class="next-slide slide-arrow" type="button" aria-label="Следующий слайд">
+            <svg class="arrow-icon" width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.292894 7.53557C-0.0976295 7.92609 -0.0976295 8.55926 0.292894 8.94978L6.65686 15.3137C7.04738 15.7043 7.68055 15.7043 8.07107 15.3137C8.46159 14.9232 8.46159 14.2901 8.07107 13.8995L2.41422 8.24268L8.07107 2.58582C8.46159 2.1953 8.46159 1.56213 8.07107 1.17161C7.68055 0.781084 7.04738 0.781084 6.65686 1.17161L0.292894 7.53557ZM31 7.24268L1 7.24268V9.24268L31 9.24268V7.24268Z" fill="#32521E"/>
+            </svg>   
+          </button>
+        </div>
+      </section>
+      <section class="catalog container" id="catalog">
+        <h2 class="visually-hidden heading"> Каталог</h2>
+        <section class="filter">
+          <h3 class="visually-hidden heading">Фильтр</h3>
+          <form method="post" action="https://echo.htmlacademy.ru">
+            <fieldset class="fieldset">
+              <legend class="filter__category">Цена</legend>
+              <div class="price-controls">
+                <div>
+                  <label class="filter__text" for="min-price">от</label>
+                  <input class="price-number" id="min-price" type="number" name="min-price" value="500" min="0">
+                </div>
+                <div>
+                  <label class="filter__text" for="max-price">до</label>
+                  <input class="price-number" id="max-price" type="number" name="max-price" value="3500">
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend class="filter__category">Расположение</legend>
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <input type="checkbox" class="checkbox" name="table" id="table" checked>
+                  <label for="table" class="filter__text">настольное</label>
+                </li>
+                <li class="filter__item">
+                  <input type="checkbox" class="checkbox" name="floor" id="floor" >
+                  <label for="floor" class="filter__text">напольные</label>
+                </li>
+                <li class="filter__item">
+                  <input type="checkbox" class="checkbox" name="hanging" id="hanging" >
+                  <label for="hanging" class="filter__text">подвесные</label>
+                </li>
+              </ul>     
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend class="filter__category">Полив</legend>
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <input class="radio" type="radio" name="watering" id="moisture-loving" checked>
+                  <label for="moisture-loving" class="filter__text">влаголюбивые</label>
+                </li>
+                <li class="filter__item">
+                  <input class="radio" type="radio" name="watering" id="medium">
+                  <label for="medium" class="filter__text">умеренный</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="fieldset">
+              <legend class="filter__category">Освещение</legend>
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <input class="radio" type="radio" name="lighting" id="shade" checked>
+                  <label for="shade" class="filter__text">полутень</label>
+                </li>
+                <li class="filter__item">
+                  <input class="radio" type="radio" name="lighting" id="bright">
+                  <label for="bright" class="filter__text">яркое</label>
+                </li>
+              </ul>
+            </fieldset>
+            <input class="button button_red" type="submit" value="показать">
+            <input class="button button_white" type="reset" value="сбросить">
+          </form>
+        </section>
+        <section class="catalog__content">
+          <h3 class="visually-hidden heading">Товары</h3>
+          <ul class="products">
+            <li class="product">
+              <img class="product__pic" src="img/img1.jpg" alt="Росянка" width="366" height="223">
+              <div class="product__content">
+                <h4 class="product__name">Росянка</h4>
+                <p class="product__text">
+                Бесстебельное насекомоядное растение. Встречается на всех континентах кроме Антарктиды.
+                </p>
+              </div>
+              <div class="product__overlay">
+                <a class="button_buy button_red" href="product.html">заказать</a>
+              </div>
+            </li>
+            <li class="product">
+              <img class="product__pic" src="img/img2.jpg" alt="Венера Мухоловка" width="366" height="223">
+              <div class="product__content">
+                <h4 class="product__name">Венера Мухоловка</h4>
+                <p class="product__text">
+                  Одним из самых популярных цветов-хищников, произрастающее в Северной Америке.  
+                </p>
+              </div>
+              <div class="product__overlay">
+                <a class="button_buy button_red" href="product.html">заказать</a>
+              </div>
+            </li>
+            <li class="product">
+              <img class="product__pic" src="img/img3.jpg" alt="Непеитес" width="366" height="223">
+              <div class="product__content">
+                <h4 class="product__name">Непеитес</h4>
+                <p class="product__text">
+                  Самое экзотическое и оригинальное комнатное насекомоядное растение, которое вы найдете. 
+                </p>
+              </div>
+              <div class="product__overlay">
+                <a class="button_buy button_red" href="product.html">заказать</a>
+              </div>
+            </li>
+            <li class="product">
+              <img class="product__pic" src="img/img4.jpg" alt="Саррацения" width="366" height="223">
+              <div class="product__content">
+                <h4 class="product__name">Саррацения</h4>
+                <p class="product__text">
+                  Необычное  растение произошедшие из влажных торфяных мест Северной и Южной Америке.  
+                </p>
+              </div>
+              <div class="product__overlay">
+                <a class="button_buy button_red" href="product.html">заказать</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section class="container advantages" id="advantages">
+        <h2 class="heading">Почему мы?</h2>
+        <ul class="advantage__list">
+          <li class="advantage__item">
+            <h3 class="advantage__title">Широкий ассортимент</h3>
+            <p class="advantage__text">Огромный выбор разнообразных растений на любой вкус.</p>
+          </li>
+          <li class="advantage__item">
+            <h3 class="advantage__title">Бесплатная Доставка</h3>
+            <p class="advantage__text">Бесплатная доставка в пределах города в день заказа</p>
+          </li>
+          <li class="advantage__item">
+            <h3 class="advantage__title">Программа скидок</h3>
+            <p class="advantage__text">Вступайте в наш клуб постоянных покупателей и получайте скидки</p>
+          </li>
+        </ul>
+      </section>
+      <section class="order" id="order">
+        <div class="container">
+          <div class="caption">
+            <h2 class="heading">Оставьте свою заявку</h2>
+            <p class="order__text">Наши опытные консультанты свяжутся с вами в течение часа и помогут подобрать растения под ваши запросы.</p>
+          </div>
+          <form action="#" class="order__form">
+            <fieldset class="order__fieldset">
+              <label for="plant">Выберите растение</label>
+              <div class="select-wrapper">
+                <select name="plant" id="plant" class="input select">
+                  <option value="" disabled selected hidden>Выберите растение</option>
+                  <option value="sundew">Росянка</option>
+                  <option value="venus-flytrap">Венера Мухоловка</option>
+                  <option value="nepenthes">Непеитес</option>
+                  <option value="sarracenia">Саррацения</option>
+                </select>
+              </div>
+              <label for="name" class="label">Ваше имя*</label>
+              <input type="text" id="name" class="input" placeholder="Мирослава" autocomplete="off">
+              <label for="tel" class="label">Телефон*</label>
+              <input type="tel" id="tel" name="phone" class="input" placeholder="+7(911) 111 11 11" pattern="+7([0-9]{3}) [0-9]{3} [0-9]{2} [0-9]{2}">
+              <label for="email" class="label" autocomplete="off">E-mail*</label>
+              <input type="email" id="email" class="input" placeholder="miroslava97@gmail.ru">
+              <input class="button button_red order__button" type="submit" value="заказать">
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer container">
+      <nav class="footer-nav">
+        <a href="#" class="logo"><img src="img/logo.png" alt="Логотип" class="logo-pic" width="120" height="49"></a>
+        <ul class="footer__menu menu">
+          <li class="menu__item">
+            <a href="#catalog" class="menu__link">каталог</a>
+          </li>
+          <li class="menu__item">
+            <a href="#advantages" class="menu__link">преимущества</a>
+          </li>
+          <li class="menu__item">
+            <a href="#order" class="menu__link">заказать</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer__row">
+        <p class="copyright">© Hanters Plants 2020</p>
+        <ul class="social">
+          <li class="social__item"><a href="#"><svg class="social__icon" width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+            <path class="path" d="M33.9667 9.70209C33.887 7.94867 33.5949 6.74321 33.1764 5.69867C32.7447 4.58991 32.0805 3.59724 31.2103 2.77203C30.3601 1.93397 29.3306 1.28277 28.2015 0.870287C27.119 0.464103 25.8835 0.180554 24.077 0.103246C22.2569 0.0193901 21.6791 0 17.063 0C12.4469 0 11.8691 0.0193901 10.0558 0.0966986C8.24923 0.174007 7.00725 0.457807 5.93131 0.86374C4.78869 1.28277 3.76594 1.92742 2.91572 2.77203C2.05227 3.59724 1.38159 4.59646 0.956352 5.69237C0.537859 6.74321 0.245718 7.94213 0.166067 9.69554C0.07967 11.4621 0.0596924 12.0229 0.0596924 16.5032C0.0596924 20.9836 0.07967 21.5444 0.159321 23.3044C0.238972 25.0578 0.531372 26.2632 0.949865 27.3078C1.38159 28.4165 2.05227 29.4092 2.91572 30.2344C3.76594 31.0725 4.79543 31.7237 5.92456 32.1362C7.00725 32.5423 8.24249 32.8259 10.0493 32.9032C11.8623 32.9808 12.4404 32.9999 17.0565 32.9999C21.6727 32.9999 22.2505 32.9808 24.0637 32.9032C25.8703 32.8259 27.1123 32.5423 28.1882 32.1362C30.4732 31.2787 32.2798 29.5253 33.1632 27.3078C33.5814 26.2569 33.8738 25.0578 33.9535 23.3044C34.0331 21.5444 34.0531 20.9836 34.0531 16.5032C34.0531 12.0229 34.0463 11.4621 33.9667 9.70209ZM30.9049 23.1754C30.8318 24.7871 30.5529 25.6574 30.3204 26.2375C29.7491 27.6752 28.5735 28.8162 27.0923 29.3707C26.4945 29.5963 25.5914 29.867 23.9374 29.9378C22.1441 30.0153 21.6062 30.0345 17.0698 30.0345C12.5333 30.0345 11.9887 30.0153 10.2019 29.9378C8.54137 29.867 7.64471 29.5963 7.04694 29.3707C6.30984 29.1063 5.63891 28.6872 5.09432 28.1393C4.52976 27.6042 4.09803 26.9595 3.82561 26.2441C3.59314 25.6639 3.31423 24.7871 3.24133 23.182C3.16142 21.4414 3.1417 20.9191 3.1417 16.5161C3.1417 12.113 3.16142 11.5844 3.24133 9.85041C3.31423 8.23877 3.59314 7.36848 3.82561 6.78829C4.09803 6.07262 4.52976 5.42167 5.10107 4.89285C5.65214 4.34489 6.31633 3.92586 7.05369 3.6617C7.65146 3.43607 8.55486 3.16537 10.2086 3.09435C12.0019 3.01705 12.54 2.99766 17.0762 2.99766C21.6195 2.99766 22.1573 3.01705 23.9441 3.09435C25.6046 3.16537 26.5013 3.43607 27.0991 3.6617C27.8362 3.92586 28.5071 4.34489 29.0517 4.89285C29.6162 5.42796 30.048 6.07262 30.3204 6.78829C30.5529 7.36848 30.8318 8.24506 30.9049 9.85041C30.9846 11.591 31.0046 12.113 31.0046 16.5161C31.0046 20.9191 30.9846 21.4349 30.9049 23.1754Z" fill="#A4341C"/>
+            <path class="path" d="M17.063 8.026C12.2411 8.026 8.32886 11.8229 8.32886 16.5032C8.32886 21.1836 12.2411 24.9805 17.063 24.9805C21.8851 24.9805 25.7971 21.1836 25.7971 16.5032C25.7971 11.8229 21.8851 8.026 17.063 8.026ZM17.063 22.0022C13.9348 22.0022 11.3974 19.5397 11.3974 16.5032C11.3974 13.4668 13.9348 11.0043 17.063 11.0043C20.1914 11.0043 22.7286 13.4668 22.7286 16.5032C22.7286 19.5397 20.1914 22.0022 17.063 22.0022Z" fill="#A4341C"/>
+            <path class="path" d="M28.1818 7.69084C28.1818 8.78374 27.2688 9.66989 26.1425 9.66989C25.0165 9.66989 24.1035 8.78374 24.1035 7.69084C24.1035 6.59769 25.0165 5.71179 26.1425 5.71179C27.2688 5.71179 28.1818 6.59769 28.1818 7.69084Z" fill="#A4341C"/>
+            </g>
+            <defs>
+            <clipPath id="clip0">
+            <rect width="34" height="33" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+            </a>
+          </li>
+          <li class="social__item"><a href="#"><svg class="social__icon" width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="path" d="M30.1614 0.0151368H1.80385C0.832851 0.0157032 0.0457039 0.780077 0.0458985 1.72289V29.2464C0.0464821 30.1888 0.834019 30.9528 1.8054 30.9526H17.0729V18.9885H12.9329V14.3056H17.0729V10.8593C17.0729 6.86278 19.5867 4.68748 23.2597 4.68748C25.0191 4.68748 26.5309 4.81475 26.9716 4.87159V9.04865H24.4387C22.4403 9.04865 22.0533 9.97031 22.0533 11.3231V14.3056H26.8315L26.2089 18.9885H22.0533V30.9526H30.1614C31.133 30.9528 31.9207 30.1886 31.9209 29.2456C31.9209 29.2454 31.9209 29.2453 31.9209 29.2449V1.72138C31.9205 0.778944 31.1328 0.0149479 30.1614 0.0151368Z" fill="#A4341C"/>
+            </svg>
+            </a></li>
+          <li class="social__item"><a href="#"><svg class="social__icon" width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="path" d="M36.9578 4.62711C36.5256 3.02058 35.259 1.75418 33.6527 1.32159C30.7182 0.518677 18.98 0.518677 18.98 0.518677C18.98 0.518677 7.24226 0.518677 4.30777 1.29115C2.73238 1.72328 1.43484 3.02081 1.00272 4.62711C0.230469 7.56137 0.230469 13.6467 0.230469 13.6467C0.230469 13.6467 0.230469 19.7626 1.00272 22.6662C1.4353 24.2725 2.70148 25.5389 4.308 25.9715C7.27316 26.7746 18.9805 26.7746 18.9805 26.7746C18.9805 26.7746 30.7182 26.7746 33.6527 26.0021C35.2592 25.5698 36.5256 24.3034 36.9582 22.6971C37.7302 19.7626 37.7302 13.6776 37.7302 13.6776C37.7302 13.6776 37.7611 7.56137 36.9578 4.62711ZM15.2428 19.2684V8.02486L25.0037 13.6467L15.2428 19.2684Z" fill="#A4341C"/>
+            </svg>
+            </a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/script.min.js"></script>
+  </body>
+ </html>
